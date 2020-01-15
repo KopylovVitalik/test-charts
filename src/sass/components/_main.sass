@@ -1,0 +1,35 @@
+.main
+  float: right
+  height: 100vh
+  width: calc(100% - 230px)
+  background-color: #f5f5f5
+  +sm 
+    float: none
+    width: 100%
+  &__inner
+    padding: 0 72px
+    +sm 
+      padding: 0 15px
+  &__bottom-charts
+    display: flex
+    justify-content: space-between
+
+
+.area-chart-wrapper
+  padding: 20px
+  background-color: $white
+  margin-bottom: 40px
+
+.donat-chart-wrapper
+  background-color: $white
+  padding: 18px
+  +fsize(40%)
+  canvas
+    width: 100%
+
+.bar-chart-wrapper
+  background-color: $white
+  padding: 15px
+  +fsize(calc(60% - 12px))
+  canvas
+    width: 100%

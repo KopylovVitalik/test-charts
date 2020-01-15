@@ -1,0 +1,37 @@
+.sidebar
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  width: 230px
+  background-color: $darkGrey
+  font-family: $menuFont
+  &__title
+    background-color: $darkBlue
+    +fcenter
+    padding: 24px
+
+.sidebar-menu
+  &__item
+    display: flex
+    align-items: center
+    padding: 20px 22px
+    opacity: 0.5
+    transition: background-color $tr, opacity $tr
+    +hover 
+      background-color: $lightGrey
+      opacity: 1
+  &__link
+    text-decoration: none
+    color: $white
+  &__icon
+    color: $white
+    margin-right: 16px
+    font-size: 0
+    +icenter
+    .icon
+      font-size: 16px
+      max-width: 16px
+  &__text
+    font-size: 14px
+    +icenter

@@ -1,0 +1,58 @@
+{% set menu = [
+  {
+    text: "Home",
+    icon: 'home',
+    link: 'home',
+    modifier: 'home'
+  },
+  {
+    text: "Time Management",
+    icon: 'clock',
+    link: 'time-managment'
+  },
+  {
+    text: "Inbox",
+    icon: 'inbox',
+    link: 'inbox'
+  },
+  {
+    text: "Calendar",
+    icon: 'calendar',
+    link: 'calendar'
+  },
+  {
+    text: "Analitics",
+    icon: 'analitics',
+    link: 'analitics',
+    active: true
+  },
+  {
+    text: "Settings",
+    icon: 'settings',
+    link: 'settings'
+  }
+] %}
+
+<div class="sidebar">
+  <div class="sidebar__title">
+    <h2 class="title">Работа мечты</h2>
+  </div>
+  <div class="sidebar__menu">
+    <nav class="sidebar-menu">
+      <ul class="sidebar-menu__list">
+        {% for item in menu %}
+          <li class="sidebar-menu__item{% if item.active %} is-active{% endif %}">
+            <a href="{{ item.link }}" class="sidebar-menu__link">
+              <span class="sidebar-menu__icon">
+                {{ mixins.icon(item.icon) }}
+              </span>
+              <span class="sidebar-menu__text">
+                {{ item.text }}
+              </span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</div>
