@@ -43,13 +43,7 @@
   &__bottom-charts
     display: flex
     justify-content: space-between
-    
-    height: 20vh
-    min-height: 192px
-    +xl 
-      min-height: 150px
-      height: auto
-    +sm 
+    +md
       flex-wrap: wrap
 
 .area-chart-controls
@@ -77,11 +71,8 @@
   +xl 
     padding: 8px
   +sm 
-    // +fsize(290px)
     padding: 5px
     margin-bottom: 15px
-  // canvas
-  //   width: 100%
 
 .bar-chart-wrapper
   background-color: $white
@@ -91,8 +82,14 @@
   position: relative
   +xl 
     padding: 5px
-  +sm 
+  +md 
     +fsize(100%)
     padding: 8px
-  // canvas
-  //   width: 100%
+
+.bar-chart-wrapper,
+.donat-chart-wrapper
+  height: 20vh
+  min-height: 192px
+  +xl 
+    min-height: 150px
+    height: auto

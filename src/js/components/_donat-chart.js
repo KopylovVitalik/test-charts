@@ -7,7 +7,7 @@ var config = {
     datasets: [
       {
         data: [0.5, 0.5],
-        backgroundColor: ['red', 'orange'],
+        backgroundColor: ['#f2651e', '#ffe401'],
         label: 'Dataset 1'
       }
     ],
