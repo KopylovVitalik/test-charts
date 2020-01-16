@@ -2,3 +2,4 @@
 import './_area-chart';
 import './_donat-chart';
 import './_bar-chart';
+import './_mob-toggler';

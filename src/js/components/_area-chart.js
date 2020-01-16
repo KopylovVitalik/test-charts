@@ -164,7 +164,6 @@ var config = {
       displayColors: false,
       callbacks: {
         title: function(tooltipItem, data) {
-          console.log(tooltipItem);
           return '';
         },
         label: function(tooltipItem, data) {

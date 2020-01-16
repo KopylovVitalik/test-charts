@@ -14,9 +14,6 @@ var horizontalBarChartData = {
         'rgba(54, 162, 235, 0.2)'
       ],
       borderWidth: 1,
-      // barPercentage: 0.8,
-      // barThickness: 18,
-      // maxBarThickness: 20,
       data: [1000, 600, 100, 100, 200]
     }
   ]
@@ -45,19 +42,10 @@ var myHorizontalBar = new Chart(ctx, {
     scales: {
       xAxes: [
         {
-          // offset: true,
           ticks: {
             beginAtZero: true,
             max: 2000
-            // labelOffset: -10
           }
-          // gridLines: {
-          //   color: 'rgba(51, 51, 51, 0.2)',
-          //   lineWidth: 2,
-          //   drawBorder: false,
-          //   drawTicks: false
-          //   // tickMarkLength: 10
-          // }
         }
       ]
     }

@@ -16,26 +16,13 @@ var config = {
   options: {
     responsive: true,
     maintainAspectRatio: false,
-    cutoutPercentage: function(context) {
-      // var width = context.chart.width;
-      // var weight = width < 768 ? 60 : 80;
-      // return weight;
-      // console.log('sss');
-    },
+    cutoutPercentage: 70,
     legend: {
       position: 'right',
       borderWidth: 0,
       labels: {
         boxWidth: 16,
-        font: function(context) {
-          var width = context.chart.width;
-          var size = Math.round(width / 32);
-
-          return {
-            weight: 'bold',
-            size: size
-          };
-        }
+        fontSize: 16
       },
       onClick: e => e.stopPropagation()
     },
