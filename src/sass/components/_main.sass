@@ -43,15 +43,17 @@
   &__bottom-charts
     display: flex
     justify-content: space-between
-    flex-wrap: wrap
+    
     height: 20vh
     min-height: 192px
     +xl 
       min-height: 150px
       height: auto
+    +sm 
+      flex-wrap: wrap
 
 .area-chart-controls
-  margin-bottom: 40px
+  margin-bottom: 30px
   display: flex
   justify-content: space-between
   +sm 
@@ -60,18 +62,22 @@
 
 .area-chart-wrapper
   position: relative
-  height: 30vh
+  height: 33vh
   min-height: 300px
 
 .donat-chart-wrapper
   background-color: $white
   padding: 18px
-  +fsize(30%)
+  +fsize(290px)
   position: relative
+  background-image: url(../img/donat-chart.png)
+  background-repeat: no-repeat
+  background-position: 35% 50%
+  background-size: auto 40%
   +xl 
     padding: 8px
   +sm 
-    +fsize(100%)
+    // +fsize(290px)
     padding: 5px
     margin-bottom: 15px
   // canvas
@@ -80,7 +86,8 @@
 .bar-chart-wrapper
   background-color: $white
   padding: 15px
-  +fsize(calc(70% - 12px))
+  +fsize(calc(100% - 302px))
+  margin-left: 12px
   position: relative
   +xl 
     padding: 5px

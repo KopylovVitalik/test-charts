@@ -9,7 +9,7 @@ const createWeekDataset = () => {
     label: 'First dataset',
     borderColor: 'transparent',
     borderWidth: 0,
-    backgroundColor: 'rgba(249, 102, 154, 0.7)',
+    backgroundColor: 'rgba(249, 102, 154, 0.6)',
     data: [
       randomData(),
       randomData(),
@@ -30,7 +30,7 @@ const createWeekDataset = () => {
     label: 'Second dataset',
     borderColor: 'transparent',
     borderWidth: 0,
-    backgroundColor: 'rgba(215, 169, 223, 0.7)',
+    backgroundColor: 'rgba(215, 169, 223, 0.6)',
     data: [
       randomData(),
       randomData(),
@@ -64,7 +64,7 @@ const createYearDataset = () => {
     label: 'First dataset',
     borderColor: 'transparent',
     borderWidth: 0,
-    backgroundColor: 'rgba(249, 102, 154, 0.7)',
+    backgroundColor: 'rgba(249, 102, 154, 0.6)',
     data: [
       randomData(),
       randomData(),
@@ -90,7 +90,7 @@ const createYearDataset = () => {
     label: 'Second dataset',
     borderColor: 'transparent',
     borderWidth: 0,
-    backgroundColor: 'rgba(215, 169, 223, 0.7)',
+    backgroundColor: 'rgba(215, 169, 223, 0.6)',
     data: [
       randomData(),
       randomData(),
@@ -138,9 +138,18 @@ var config = {
     labels: weekDataSet.labels,
     datasets: [weekDataSet.firstDataSet, weekDataSet.secondDataSet]
   },
+
   duration: 500,
   easing: 'easeOutBounce',
   options: {
+    layout: {
+      padding: {
+        left: 0,
+        right: 0,
+        top: 15,
+        bottom: 0
+      }
+    },
     responsive: true,
     maintainAspectRatio: false,
     legend: {
@@ -197,13 +206,23 @@ var config = {
           },
           ticks: {
             beginAtZero: true,
-            padding: 10
+            padding: 10,
+            stepSize: 5,
+            max: 60,
+            callback: function(value, index, values) {
+              if (value % 10 === 0) {
+                return value;
+              } else {
+                return ' ';
+              }
+            }
           },
           gridLines: {
             color: 'rgba(51, 51, 51, 0.2)',
-            lineWidth: 2,
+            lineWidth: 1,
             drawBorder: false,
             drawTicks: false
+            // offsetGridLines: 20
           }
         }
       ]
@@ -225,7 +244,6 @@ new SlimSelect({
       info.value === 'week'
         ? [weekDataSet.firstDataSet, weekDataSet.secondDataSet]
         : [yearDataSet.firstDataSet, yearDataSet.secondDataSet];
-    console.log(info.value, data.label);
     chart.update();
   }
 });
