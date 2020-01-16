@@ -27,8 +27,8 @@ var myHorizontalBar = new Chart(ctx, {
   type: 'horizontalBar',
   data: horizontalBarChartData,
   options: {
-    // Elements options apply to all of the options unless overridden in a dataset
-    // In this case, we are setting the border of each horizontal bar to be 2px wide
+    responsive: true,
+    maintainAspectRatio: false,
     elements: {
       rectangle: {
         borderWidth: 2
@@ -47,7 +47,8 @@ var myHorizontalBar = new Chart(ctx, {
         {
           // offset: true,
           ticks: {
-            beginAtZero: true
+            beginAtZero: true,
+            max: 2000
             // labelOffset: -10
           }
           // gridLines: {

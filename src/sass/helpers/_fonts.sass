@@ -6,3 +6,17 @@
 	font-style: $style
 	font-weight: $weight
 
+$avenir: 'AvenirNextLTPro'
+$openSans: 'Open Sans'
+
+@font-face
+	+fontdefault(normal, 400, $avenir)
+	+fontpath('AvenirNextLTPro-Regular', 'AvenirNextLTPro-Regular', AvenirNextLTPro-Regular)
+
+@font-face
+	+fontdefault(normal, 400, $openSans)
+	+fontpath('OpenSans-Regular', 'OpenSans-Regular', OpenSans-Regular)
+
+@font-face
+	+fontdefault(normal, 700, $openSans)
+	+fontpath('OpenSans-Bold', 'OpenSans-Bold', OpenSans-Bold)

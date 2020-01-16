@@ -2,6 +2,7 @@ import Chart from 'chart.js';
 
 var config = {
   type: 'doughnut',
+
   data: {
     datasets: [
       {
@@ -13,14 +14,28 @@ var config = {
     labels: ['Да', 'Нет']
   },
   options: {
-    cutoutPercentage: 80,
     responsive: true,
+    maintainAspectRatio: false,
+    cutoutPercentage: function(context) {
+      // var width = context.chart.width;
+      // var weight = width < 768 ? 60 : 80;
+      // return weight;
+      // console.log('sss');
+    },
     legend: {
       position: 'right',
       borderWidth: 0,
       labels: {
         boxWidth: 16,
-        fontSize: 16
+        font: function(context) {
+          var width = context.chart.width;
+          var size = Math.round(width / 32);
+
+          return {
+            weight: 'bold',
+            size: size
+          };
+        }
       },
       onClick: e => e.stopPropagation()
     },

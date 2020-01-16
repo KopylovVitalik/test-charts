@@ -79,3 +79,73 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector('#area-chart'), options);
 chart.render();
+
+
+const createDataset = (items) => {
+
+  function monthData() {
+    var prevMonth = moment()
+      .subtract(1, 'month')
+      .startOf('month');
+    var prevMonthDays = prevMonth.daysInMonth();
+
+    var prevMonthDates = [];
+
+    for (var i = 0; i < prevMonthDays; i++) {
+      var prevMonthDay = prevMonth
+        .clone()
+        .add(i, 'days')
+        .format('MM-DD');
+      prevMonthDates.push(prevMonthDay);
+    }
+  }
+
+  switch (items) {
+    case 'week':
+  }
+
+  const firstDataSet = {
+    label: 'My First dataset',
+    borderColor: 'transparent',
+    borderWidth: 0,
+    backgroundColor: 'rgba(249, 102, 154, 0.7)',
+    data: [
+      randomData(),
+      randomData(),
+      randomData(),
+      randomData(),
+      randomData(),
+      randomData(),
+      randomData()
+    ],
+    pointRadius: 0,
+    pointBorderWidth: 0,
+    hoverRadius: 5,
+    hoverBorderWidth: 4,
+    pointBorderColor: 'black',
+    pointBackgroundColor: '#FFF'
+  };
+  const secondDataSet = {
+    label: 'My Second dataset',
+    borderColor: 'transparent',
+    borderWidth: 0,
+    backgroundColor: 'rgba(215, 169, 223, 0.7)',
+    data: [
+      randomData(),
+      randomData(),
+      randomData(),
+      randomData(),
+      randomData(),
+      randomData(),
+      randomData()
+    ],
+    pointRadius: 0,
+    pointBorderWidth: 0,
+    hoverRadius: 5,
+    hoverBorderWidth: 4,
+    pointBorderColor: 'black',
+    pointBackgroundColor: '#FFF'
+  };
+  const labels = ['05.30', '05.31', '06.01', '06.02', '06.03', '06.04', '06.05'];
+  return { firstDataSet, secondDataSet, labels };
+};

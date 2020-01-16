@@ -1,35 +1,83 @@
 .main
   float: right
-  height: 100vh
+  min-height: 100vh 
+  padding: 70px 0 50px
   width: calc(100% - 230px)
   background-color: #f5f5f5
+  font-family: $mainFont
+  +md 
+    width: calc(100% - 180px)
   +sm 
     float: none
     width: 100%
+  &__header
+    padding-bottom: 24px
+    border-bottom: 2px solid rgba(#bcc7d3, 0.4)
+    margin-bottom: 40px
+    margin-top: 50px
+    h2 
+      color: #78909c
+      font-size: 14px
+      font-weight: 400
+      letter-spacing: 0.015em
+      line-height: 1.5
+      .name 
+        color: #37474f
+        font-size: 18px
   &__inner
     padding: 0 72px
-    +sm 
+    +xl 
+      padding: 0 30px
+    +md 
       padding: 0 15px
+  &__top-chart
+      padding: 20px 20px 10px
+      background-color: $white
+      margin-bottom: 40px
+      +sm 
+        padding: 20px 0 10px
   &__bottom-charts
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
+    height: 20vh
+    min-height: 192px
+    +xl 
+      min-height: 150px
 
+.area-chart-controls
+  margin-bottom: 40px
+  display: flex
+  justify-content: space-between
 
 .area-chart-wrapper
-  padding: 20px
-  background-color: $white
-  margin-bottom: 40px
+  position: relative
+  height: 30vh
+  min-height: 300px
 
 .donat-chart-wrapper
   background-color: $white
   padding: 18px
-  +fsize(40%)
-  canvas
-    width: 100%
+  +fsize(30%)
+  position: relative
+  +xl 
+    padding: 5px
+  +sm 
+    +fsize(100%)
+    padding: 5px
+    margin-bottom: 12px
+  // canvas
+  //   width: 100%
 
 .bar-chart-wrapper
   background-color: $white
   padding: 15px
-  +fsize(calc(60% - 12px))
-  canvas
-    width: 100%
+  +fsize(calc(70% - 12px))
+  position: relative
+  +xl 
+    padding: 5px
+  +sm 
+    +fsize(100%)
+    padding: 5px
+  // canvas
+  //   width: 100%

@@ -1,8 +1,28 @@
 <main class="main">
+  <div class="main__navbar"></div>
   <div class="main__inner">
-    <h1>Area chart</h1>
-    <div class="area-chart-wrapper">
-      <canvas id="area-chart"></canvas>
+    <div class="main__header">
+      <h2>
+        <span class="name">Hi Filip,</span><br />
+        Checkout your latest projects and their progress.
+      </h2>
+    </div>
+    <div class="main__top-chart">
+      <div class="area-chart-controls">
+        <div class="text">
+          <h2>Wavy Lines</h2>
+          <p>Working Hours</p>
+        </div>
+        <div class="select">
+          <select id="area-chart-select">
+            <option value="week">THIS WEEK</option>
+            <option value="year">THIS YEAR</option>
+          </select>
+        </div>
+      </div>
+      <div class="area-chart-wrapper">
+        <canvas id="area-chart"></canvas>
+      </div>
     </div>
     <div class="main__bottom-charts">
       <div class="donat-chart-wrapper">
