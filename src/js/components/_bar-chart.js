@@ -4,16 +4,16 @@ var horizontalBarChartData = {
   labels: ['Всего', 'Закрыто', 'В работе', 'Новый', 'Просрочен'],
   datasets: [
     {
-      label: 'Dataset 1',
+      label: 'Projects',
       fill: false,
       backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
-        'rgba(255, 205, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(54, 162, 235, 0.2)'
+        'rgba(255, 135, 160, 0.5)',
+        'rgba(111, 194, 245, 0.5)',
+        'rgba(255, 218, 110, 0.5)',
+        'rgba(107, 210, 211, 0.5)',
+        'rgba(189, 144, 255, 0.5)'
       ],
-      borderWidth: 1,
+      borderWidth: 2,
       data: [1000, 600, 100, 100, 200]
     }
   ]
@@ -44,7 +44,15 @@ var myHorizontalBar = new Chart(ctx, {
         {
           ticks: {
             beginAtZero: true,
-            max: 2000
+            max: 2000,
+            fontSize: 12
+          }
+        }
+      ],
+      yAxes: [
+        {
+          ticks: {
+            fontSize: 11
           }
         }
       ]

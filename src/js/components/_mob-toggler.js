@@ -1,4 +1,4 @@
-import { ACTIVE, OVERFLOW_HIDDEN, BODY, WIN } from '../constants';
+import { ACTIVE } from '../constants';
 
 const toggler = $('.js-mob-toggler');
 const menu = $('.js-menu');

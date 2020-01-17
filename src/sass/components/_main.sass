@@ -11,11 +11,15 @@
     float: none
     width: 100%
     padding-top: 50px
+    padding-bottom: 30px
   &__header
     padding-bottom: 24px
     border-bottom: 2px solid rgba(#bcc7d3, 0.4)
     margin-bottom: 40px
     margin-top: 50px
+    +md 
+      margin-bottom: 24px
+      padding-bottom: 16px
     +sm 
       margin-top: 32px
     h2 
@@ -25,7 +29,7 @@
       letter-spacing: 0.015em
       line-height: 1.5
       .name 
-        color: #37474f
+        color: $darkGrey
         font-size: 18px
   &__inner
     padding: 0 72px
@@ -37,59 +41,73 @@
       padding: 20px 20px 10px
       background-color: $white
       margin-bottom: 40px
+      +md 
+        margin-bottom: 15px
       +sm 
         padding: 20px 0 10px
         margin-bottom: 15px
+      .area-chart-wrapper
+        margin-left: -6px
+        width: calc(100% + 6px)
+        +sm 
+          margin-left: 0
+          width: 100%
   &__bottom-charts
     display: flex
     justify-content: space-between
+    height: 20vh
+    min-height: 192px
+    +xl 
+      min-height: 150px
+      height: auto
     +md
       flex-wrap: wrap
+  &__doughnut-chart
+    +fsize(290px)
+    +md 
+      margin-bottom: 15px
+    .doughnut-chart-wrapper
+      background-image: url(../img/doughnut-chart.png)
+      background-repeat: no-repeat
+      background-position: 35% 50%
+      background-size: auto 40%
+      height: 100%
+  &__bar-chart
+    +fsize(calc(100% - 302px))
+    margin-left: 12px
+    +md 
+      +fsize(100%)
+      margin-left: 0
+    .bar-chart-wrapper
+      height: 100%
 
 .area-chart-controls
   margin-bottom: 30px
   display: flex
   justify-content: space-between
+  align-items: center
+  font-size: 14px
   +sm 
     padding: 0 15px
     margin-bottom: 20px
+    font-size: 12px
+  h2 
+    font-weight: 400
+    color: $darkGrey
+  p
+    color: #78909c
 
 .area-chart-wrapper
   position: relative
   height: 33vh
   min-height: 300px
 
-.donat-chart-wrapper
-  background-color: $white
-  padding: 18px
-  +fsize(290px)
-  position: relative
-  background-image: url(../img/donat-chart.png)
-  background-repeat: no-repeat
-  background-position: 35% 50%
-  background-size: auto 40%
-  +xl 
-    padding: 8px
-  +sm 
-    padding: 5px
-    margin-bottom: 15px
-
+.doughnut-chart-wrapper,
 .bar-chart-wrapper
   background-color: $white
   padding: 15px
-  +fsize(calc(100% - 302px))
-  margin-left: 12px
   position: relative
   +xl 
-    padding: 5px
-  +md 
-    +fsize(100%)
     padding: 8px
 
-.bar-chart-wrapper,
-.donat-chart-wrapper
-  height: 20vh
-  min-height: 192px
-  +xl 
-    min-height: 150px
-    height: auto
+

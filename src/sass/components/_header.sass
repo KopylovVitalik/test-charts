@@ -2,11 +2,12 @@
   position: fixed
   top: 0
   left: 0
+  display: flex
   width: 100%
   height: 70px
-  background-color: #e0e0e0
-  display: flex
   z-index: 100
+  font-family: $menuFont
+  background-color: #e0e0e0
   +sm 
     height: 50px
     justify-content: space-between
@@ -20,6 +21,8 @@
     +md 
       +fsize(180px)
       font-size: 14px
+    +sm 
+      flex: 0 0 auto
   &__mob-toggler
     display: none
     +sm 

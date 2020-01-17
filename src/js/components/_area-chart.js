@@ -48,13 +48,13 @@ const createWeekDataset = () => {
     pointBackgroundColor: '#FFF'
   };
   const labels = [
-    '05.30',
-    '05.31',
-    '06.01',
-    '06.02',
-    '06.03',
-    '06.04',
-    '06.05'
+    '30.05',
+    '31.05',
+    '01.06',
+    '02.06',
+    '03.06',
+    '04.06',
+    '05.06'
   ];
   return { firstDataSet, secondDataSet, labels };
 };
@@ -138,7 +138,6 @@ var config = {
     labels: weekDataSet.labels,
     datasets: [weekDataSet.firstDataSet, weekDataSet.secondDataSet]
   },
-
   duration: 500,
   easing: 'easeOutBounce',
   options: {
@@ -194,7 +193,8 @@ var config = {
             display: false
           },
           ticks: {
-            lineHeight: 2
+            lineHeight: 2.5,
+            fontSize: 14
           }
         }
       ],
@@ -206,9 +206,10 @@ var config = {
           },
           ticks: {
             beginAtZero: true,
-            padding: 10,
+            padding: 12,
             stepSize: 5,
             max: 60,
+            fontSize: 14,
             callback: function(value, index, values) {
               if (value % 10 === 0) {
                 return value;
@@ -229,6 +230,10 @@ var config = {
     }
   }
 };
+
+// Default for all charts
+Chart.defaults.global.defaultFontFamily = '"AvenirNext", Helvetica, sans-serif';
+// Chart.defaults.global.defaultFontSize = 11;
 
 var ctx = document.getElementById('area-chart').getContext('2d');
 var chart = new Chart(ctx, config);
