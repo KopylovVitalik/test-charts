@@ -66,7 +66,7 @@
     "webpack-bundle-analyzer": "^1.5.3"
   },
   "dependencies": {
-    "apexcharts": "^3.15.0",
+    "apexcharts": "^3.24.0",
     "chart.js": "^2.9.3",
     "chartjs-plugin-datalabels": "^0.7.0",
     "moment": "^2.24.0",
